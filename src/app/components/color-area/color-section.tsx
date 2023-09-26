@@ -1,5 +1,5 @@
-import { TailwindColor } from "@/app/types/tailwind-colors";
-import { cn } from "@/app/utils/cn";
+import { TailwindColor } from "@/types/tailwind-colors";
+import { cn } from "@/utils/cn";
 import { ComponentProps } from "react";
 
 type ColorSectionProps = ComponentProps<"div"> & {

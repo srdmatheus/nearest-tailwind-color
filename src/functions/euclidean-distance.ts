@@ -1,4 +1,4 @@
-import { TailwindColor } from "@/app/types/tailwind-colors";
+import { TailwindColor } from "@/types/tailwind-colors";
 export const euclideanDistance = (
   color1: TailwindColor,
   color2: TailwindColor,

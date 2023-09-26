@@ -1,4 +1,4 @@
-import { TailwindColors } from "@/app/types/tailwind-colors";
+import { TailwindColors } from "@/types/tailwind-colors";
 
 export const tailwindColorClasses: TailwindColors = {
   white: { r: 255, g: 255, b: 255 },

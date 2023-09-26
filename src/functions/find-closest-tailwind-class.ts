@@ -1,4 +1,4 @@
-import { tailwindColorClasses } from "@/app/constants/tailwind-colors";
+import { tailwindColorClasses } from "@/constants/tailwind-colors";
 import { euclideanDistance } from "./euclidean-distance";
 import { TailwindColor } from "../types/tailwind-colors";
 

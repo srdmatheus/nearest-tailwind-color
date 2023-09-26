@@ -1,7 +1,7 @@
 "use client";
 
-import { useColorContext } from "@/app/contexts/color";
-import { cn } from "@/app/utils/cn";
+import { useColorContext } from "@/contexts/color";
+import { cn } from "@/utils/cn";
 import { useEffect, useState } from "react";
 import { ColorPicker as Picker, useColor } from "react-color-palette";
 import "react-color-palette/css";
