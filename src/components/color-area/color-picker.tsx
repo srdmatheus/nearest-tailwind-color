@@ -11,7 +11,7 @@ import { cn } from "@/utils/cn";
 
 export const ColorPicker = () => {
   const [colorPicker, setColorPicker] = useColor("#38deb9");
-  const [showColorPicker, setShowColorPicker] = useState(true);
+  const [showColorPicker, setShowColorPicker] = useState(false);
 
   const { hex } = colorPicker;
 
