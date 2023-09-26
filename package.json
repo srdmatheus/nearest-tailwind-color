@@ -12,6 +12,7 @@
     "clsx": "^2.0.0",
     "lucide-react": "^0.279.0",
     "next": "latest",
+    "polished": "^4.2.2",
     "react": "latest",
     "react-color-palette": "^7.1.0",
     "react-dom": "latest",
