@@ -2,12 +2,13 @@
 
 import { ColorArea } from "@/components/color-area";
 import { useColorContext } from "@/contexts/color";
+import { findClosestTailwindClass } from "@/functions/find-closest-tailwind-class";
 import { useTailwindColorMatching } from "@/hooks/useTailwindColorMatching";
 
 export default function Home() {
   const { color } = useColorContext();
-  const { nearestColor, rgbTailwindColor, similarity } =
-    useTailwindColorMatching();
+  const { nearestColor, similarity } = useTailwindColorMatching();
+  const { rgbTailwindColor } = findClosestTailwindClass(color);
 
   const handleCopy = () => {
     navigator.clipboard.writeText(nearestColor);
