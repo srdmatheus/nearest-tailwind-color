@@ -15,12 +15,14 @@ export default function Home() {
   };
 
   return (
-    <main className="grid h-full grid-cols-2">
-      <ColorArea.Root color={color}>
-        <div className="pt-16">
-          <ColorArea.Picker />
-        </div>
-      </ColorArea.Root>
+    <main className="grid-row-2 grid h-full md:grid-cols-2">
+      <div className="flex min-h-[50%] md:min-h-screen">
+        <ColorArea.Root color={color}>
+          <div className="pt-16">
+            <ColorArea.Picker />
+          </div>
+        </ColorArea.Root>
+      </div>
       <ColorArea.Root rgbColor={rgbTailwindColor}>
         <div className="relative pt-16 text-center">
           <ColorArea.Button onClick={handleCopy} title="Click to copy">

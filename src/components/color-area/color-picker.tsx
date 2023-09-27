@@ -31,7 +31,7 @@ export const ColorPicker = () => {
 
       <div
         className={cn(
-          "-top-40 left-40",
+          "left-0 top-14 z-10 md:-top-40 md:left-40",
           showColorPicker ? "absolute" : "hidden",
         )}
       >
