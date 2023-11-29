@@ -5,11 +5,11 @@ import { Github } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="fixed top-0 flex h-16 w-full items-center justify-between border-b border-b-white/70 bg-white/40 px-6 py-2 backdrop-blur-lg">
+    <header className="fixed top-0 flex h-16 w-full items-center justify-between border-b border-b-white/30 bg-white/20 px-6 py-1 backdrop-blur-lg">
       <Image
         src="/logo.svg"
-        width={160}
-        height={60}
+        width={200}
+        height={100}
         alt="Nearest Tailwind Color"
       />
 
@@ -17,7 +17,7 @@ export const Header = () => {
         href="https://github.com/srdmatheus/nearest-tailwind-color"
         target="_blank"
         title="See on Github"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-white/60"
+        className="flex h-12 w-12 items-center justify-center rounded-full transition bg-white/60  hover:bg-white"
       >
         <Github size={24} />
       </Link>
