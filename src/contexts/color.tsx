@@ -4,12 +4,14 @@ import { ReactNode, createContext, useContext, useReducer } from "react";
 
 export type ColorState = {
   color: string;
+  updateColor: (hex: string) => void
 };
 
 type ColorAction = { type: "UPDATE_COLOR"; payload: string };
 
 const initialState: ColorState = {
-  color: "#561ecb",
+  color: "#38deb9",
+  updateColor: () => {}
 };
 
 const colorReducer = (state: ColorState, action: ColorAction): ColorState => {
@@ -21,19 +23,18 @@ const colorReducer = (state: ColorState, action: ColorAction): ColorState => {
   }
 };
 
-type ColorContextProps = ColorState & {
-  dispatch: React.Dispatch<ColorAction>;
-};
-
-export const ColorContext = createContext<ColorContextProps>(
-  {} as ColorContextProps,
+export const ColorContext = createContext<ColorState>(
+  initialState,
 );
 
 export const ColorContextProvider = ({ children }: { children: ReactNode }) => {
   const [state, dispatch] = useReducer(colorReducer, initialState);
 
+  const updateColor = (hex: string) => 
+    dispatch({ type: 'UPDATE_COLOR', payload: hex });
+
   return (
-    <ColorContext.Provider value={{ ...state, dispatch }}>
+    <ColorContext.Provider value={{ ...state, updateColor }}>
       {children}
     </ColorContext.Provider>
   );
